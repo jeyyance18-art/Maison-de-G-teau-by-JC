@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sweets by Jhea Cake Shop</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <div id="menuToggle">☰</div>
+    <div class="logo">🎂 Sweets by Jhea</div>
+    <div id="cartToggle">🛒</div>
+</header>
+
+<!-- SIDEBAR MENU -->
+<div class="sidebar" id="sidebar">
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#visit">Visit</a>
+</div>
+
+<!-- CART -->
+<div class="cart" id="cartBox">
+    <h3>Your Cart 🛒</h3>
+    <div id="cartItems">No items yet</div>
+    <h4>Total: ₱<span id="total">0</span></h4>
+    <button onclick="checkout()">Checkout via Messenger</button>
+</div>
+
+<section>
+    <h2>Welcome!</h2>
+    <p>Premium cakes made with love 💕</p>
+</section>
+
+<section id="menu">
+<h2>Menu</h2>
+
+<div class="menu-container">
+
+    <div class="card" onclick="openModal('Chocolate Cake', 350)">
+        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587">
+        <h3>Chocolate Cake</h3>
+        <p>Starts at ₱350</p>
+    </div>
+
+    <div class="card" onclick="openModal('Brownies', 95)">
+        <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c">
+        <h3>Brownies</h3>
+        <p>Starts at ₱95</p>
+    </div>
+
+</div>
+</section>
+
+<!-- MODAL -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <h3 id="modalTitle"></h3>
+        <p>Price: ₱<span id="modalPrice"></span></p>
+        <button onclick="addToCart()">Add to Cart</button>
+        <button onclick="closeModal()">Close</button>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
